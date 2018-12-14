@@ -15,16 +15,16 @@ module.exports = {
   // then, convert file from jsx to compatible scripts in any browsers
   output: {
     // "bundle" is for transpiling:
-    filename: 'build/bundle.js',
-    sourceMapFilename: 'build/bundle.map',
+    filename: 'bundle.js',
+    sourceMapFilename: 'bundle.map',
   },
   devtool: '#source-map',
 
   module: {
-    loaders: [
+    rules: [
       {
         // in case of .jsx - for react
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         exclude: /(node_modules|bower_components)/,
         // To declare using Babel 
         loader: 'babel-loader',
